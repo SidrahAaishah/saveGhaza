@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
 }
+
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -10,12 +11,18 @@
         position: fixed;
         top: 0;
         width: 100%;
-        height: 3rem;
-        background-color:#013220; 
+        height: 4.2rem;
+        background-color:#002147; 
         color: white; 
         padding: 10px 5px 10px 5px; 
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+.custom-image {
+    width: 300px; /* Set the width */
+    height: 500px; /* Set the height */
+    object-fit: cover; /* This property defines how the content of the replaced element should be resized to fit its container. */
+}
+
 .navbar a {
     color: white; /* Example text color */
     padding: 10px; /* Padding around each link */
@@ -32,6 +39,8 @@
     font-size: large;
     font-weight: bold;
     border-radius: 15px;
+    background-color: green;
+    border: none;
 }
 #search{
     width: 3rem;
@@ -43,28 +52,46 @@
     font-size: large;
     font-weight: bold;
     border-radius: 15px;
+    border: none;
 }
 .page1{
     display: flex;
     align-content: center;
     justify-content: center;
-    margin-top: calc(3rem + 20px);
 }
+.intro h1 {
+    font-family: 'Montserrat', sans-serif; /* This sets the font of h1 elements */
+    font-weight: 500; /* Montserrat's weight for bold text */
+    color: #555; /* Dark grey color */
+    text-align:left; /* Centers the text */
+}
+
+.intro h5 {
+    font-family: 'Roboto', sans-serif; /* This sets the font of h2 elements */
+    color: #556; /* Lighter grey color */
+    text-align: center; /* Centers the text */
+    margin-top: 20px; /* Adds space above h2 */
+}
+
 .intro{
     background-color: #E5E4E2;
     color: black;
     width:50%;
-    height: 40rem;
+    height: 25rem;
     display: flex;
+    flex-direction: column;
     text-align: center;
     align-items: center;
     justify-content: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 100px 10px;
 }
 .photo{
     width:50%;
-    height: 40rem;
+    height: 25rem;
     background-size: cover ;
+    padding: 100px 10px ;
+    background-size: cover;
 }
 .photo img{
     width: 100%;
