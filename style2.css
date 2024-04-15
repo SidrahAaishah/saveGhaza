@@ -1,0 +1,72 @@
+.sign-in{
+    text-align: left;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+.sign-inb{
+    border-radius: 15px;
+    margin: 10px;
+    width: 600px;
+    height: 30px;
+    align-content: left;
+   padding: 0.75%;
+    
+}
+.Overlay
+{
+    padding: 30px;
+    margin-top: 16%;
+    background-color: #ffffff;
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+    position:absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px 20px;
+    box-shadow: -4px -4px 11px #c8c2c2a2,
+                4px 4px 9px rgba(147, 149, 151, 0.871);
+    }
+    .line{
+        display: flex;
+    }
+    .linep{
+        max-width: 200px;
+        width: 100%;
+        height: 12px;
+    }
+    .or{
+        max-width: 500px;
+        width: 100%;
+        height: 35px;
+        border-radius: 15px;
+
+    }
+    .cookies{
+        background-color:beige;
+        height: 50px;
+        text-align:center;
+        font-size: larger;
+    }
+    .bgup{
+        background-color: #333;
+        
+        height: 100px;
+    }
+    .up{
+        font-size: x-large;
+        color: aliceblue;
+        display: flexbox;
+        margin-left: 20px;
+        text-align: center;
+    }
+    .Withdraw{
+        font-size: large;
+    }
+    .below{
+        text-align: center;
+    }
+    .bor{
+        background-color: #333;
+    }
