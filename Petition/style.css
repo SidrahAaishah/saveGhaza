@@ -2,13 +2,8 @@
     margin: 0px;
     padding: 0px;
 }
-body{
-    display: flex;
-    flex-direction: column;
-    text-wrap:wrap;
-    justify-content: center;
-    align-items: center;
-}
+
+
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -18,7 +13,7 @@ body{
         top: 0;
         width: 100%;
         height: 4.2rem;
-        background-color:#002147; 
+        background-color:black; 
         color: white; 
         padding: 10px 5px 10px 5px; 
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -48,12 +43,17 @@ body{
     border: none;
     
 }
+#signin:hover{
+    background-color: #004d00; 
+    transform: scale(1.5); 
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3); 
+}
 #search{
     width: 3rem;
     height: 3rem;
-    padding: 10px; /* Padding around each link */
-    margin: 0 5px; /* Adds space between the navbar items */
-    text-decoration: none; /* Removes underline from links */
+    padding: 10px; 
+    margin: 0 5px; 
+    text-decoration: none; 
     flex-grow: 1; 
     font-size: large;
     font-weight: bold;
@@ -62,6 +62,7 @@ body{
 }
 .page1{
     display: flex;
+    flex-direction: column;
     align-content: center;
     justify-content: center;
 }
@@ -79,29 +80,30 @@ body{
     margin-top: 20px; /* Adds space above h2 */
 }
 
-.intro{
+.intro {
     background-color: #E5E4E2;
     color: black;
-    width:50%;
-    height: 25rem;
+    height: 35rem;
     display: flex;
     flex-direction: column;
-    text-align: center;
     align-items: center;
     justify-content: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin: 100px 10px;
+    text-align: center;
+    box-sizing: border-box; /* Include padding and border in the element's dimensions */
+    width: 100%; /* Ensures full-width */
 }
-.photo{
-    width:50%;
-    height: 25rem;
-    background-size: cover ;
-    padding: 100px 10px ;
-    background-size: cover;
+.intro h5 {
+    padding: 20px 40px; /* Horizontal and vertical padding */
+    margin: 10px 0; /* Adds space between h1 and h5 */
+    width: calc(100% - 80px); /* Adjusts width considering padding */
+    box-sizing: border-box; /* Ensures padding is included in width calculation */
 }
+
+
 .photo img{
     width: 100%;
-    height: auto;
+    height: 37rem;
 }
 .main-area{
     display: flex;
@@ -156,9 +158,73 @@ body{
     text-align: right;
 }
 .community{
-    font-size: xx-large;
+    font-size: 70px;
     font-weight: bolder;
     text-align: center;
     margin-top: 5rem;
-    margin-bottom: 3rem;
 }
+.tagline{
+    font-size: medium;
+    font-weight: 40px;
+    text-align: center;
+}
+.custom-img {
+    width: 100%; /* Ensure full width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the area without stretching the image */
+}
+#carouselExampleCaptions {
+    max-width: 100%; /* Limit the carousel to the width of its container */
+    margin: auto; /* Centering if needed */
+}
+
+
+.intro {
+    background-color: #E5E4E2;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.container{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+   text-wrap: wrap;
+   justify-content: space-around;
+    align-items: center;
+    margin-top: 4px;
+}
+.footer-area{
+    background-color: black;
+    height: 200px;
+}
+.page2{
+    background-color: black;
+    color: white;
+}
+
+.row{
+margin-top: 20px;
+}
+
+.footers{
+    background-color: black;
+}
+.card:hover ,.signin-btn{
+    transform: scale(1.07); /* Slightly increase the size of the card */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* Increase the shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for transform and shadow */
+}
+.social-links{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.footers{
+    display: flex;
+    flex-direction: column;
+}
+
