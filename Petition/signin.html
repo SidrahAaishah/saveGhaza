@@ -5,21 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-in</title>
     <link rel="stylesheet" href="style2.css">
-    <link rel="text/javascript" href="java.js">
-    <script src="java.js"></script>
+
 </head>
 <body>
     <div class="cookies"><p><br>We use cookies to make service simpler.<a href=""> Find out more about cookies</a></p></div>
     <div class="bgup"><p class="up"><img src=""><br><b>Petitions</b><br>Under Sidrah's rule</p></div>
 
     <div class="Overlay">
-    <div class="sign-in">
-        <form>
+    <div class="sign-in" id="sign-in">
+        <form id="sign">
             <h1><b>Sign Petition</b></h1><br>
             <p class="Withdraw">Withdraw support for Israel and support Palestine<br>in Israel-Palestine conflict
             </p><hr style="color: blueviolet;"><br>
             <p><label for="name">Name</label>
-            <input type="text" class="sign-inb" name="name"></p>
+            <input type="text" class="sign-inb" name="name" id="name"></p>
             <p><label for="email">Email</label>
                 <input type="email" class="sign-inb" name="email" id="email" placeholder="abcxyz@gmail.com">
             </p><br>
@@ -40,12 +39,58 @@
     <div class="below">
         <p>or<br></p>
         <p>By clicking continue, you agree to Qadr's <a href="">User Agreement, </a><a href="">privacy Policy, </a> and <a href="">Cookie Policy.</a></p>
-        <br><input type="submit" value="Continue" class="or">
+        <br><input type="submit" class="or" onclick="sendotp()">
     </div>
         </form>
     </div>
    
 </div>
 <div class="bor"><br><br></div>
+<script>
+    document.getElementById("sign").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const email = document.getElementById("email").value;
+    const name = document.getElementById("name").value;
+    if (!name.trim()) {
+        alert("Please enter your name.");
+        return;}
+    if (!email.trim()) {
+        alert("Please enter your email address.");
+        return;
+    }
+    if (validateEmail(email)) {
+        const otpcont = document.getElementById("sign-in");
+        otpcont.innerHTML = "OTP has been sent to your registered email!<br>Enter OTP: <br>";
+
+        const inputOtp = document.createElement("input");
+        inputOtp.type = "text";
+        otpcont.appendChild(inputOtp);
+
+        const submitButton = document.createElement("button");
+        submitButton.type = "submit";
+        submitButton.textContent = "Submit"; 
+        otpcont.appendChild(submitButton);
+
+        const form = document.createElement("form");
+
+
+        form.appendChild(inputOtp);
+        form.appendChild(submitButton);
+
+        otpcont.appendChild(form);
+
+    } else {
+        alert("Email is not valid");
+    }
+
+});
+
+
+function validateEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+}
+
+</script>
 </body>
 </html>
