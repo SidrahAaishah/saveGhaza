@@ -31,10 +31,9 @@
                     <option value="South Korea">South Korea</option>
                     <option value="China">China</option>
                     <option value="Pakistan">Pakistan</option>
-        <option value="france">France</option>
-        <option value="Italy">Italy</option>
+                    <option value="france">France</option>
+                    <option value="Italy">Italy</option>
 
-                    <!-- other options -->
                 </select><br><br>
                 <p id="otpSection" style="display:none;">
                     <label for="otp">OTP:</label>
@@ -51,7 +50,7 @@
     </div>
     <script>
         document.getElementById("sign").addEventListener("submit", function(event) {
-            event.preventDefault();  // Prevent form submission to handle with JavaScript
+            event.preventDefault();  
             const email = document.getElementById("email").value;
             const name = document.getElementById("name").value;
             if (!name.trim()) {
