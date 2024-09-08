@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>
+            sessional 2 revision 
+        </title>
+    </head>
+    <body onload="window.alert('page successfully loaded');">
+
+        <button id="test" onclick="myfunction()"> Click Me</button>
+        <p id="demo"></p>
+        <p id="test1" onmouseover="meow()">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit quo est aliquid temporibus placeat debitis, doloremque culpa necessitatibus ratione distinctio similique id cum minus consequatur officiis consectetur repellat et non!</p>
+        
+        <form onsubmit="dishoom()">
+            <input type="text" id="text2" onfocus="tring()" onblur="tringtring()"/>
+            <input type="submit" value="submit" />
+            <select id="Myselect" onchange="dhoom()">
+            <option value="Audi">Audi</option>
+            <option value="BMW">BMW</option>
+            <option value="MERCEDES">MERCEDES</option>
+            <option value="ALTO">ALTO</option>
+        </select>
+    </form>
+    <p id="teesmaarkhan"></p>
+        <script>
+            function myfunction(){
+                document.getElementById("demo").innerHTML="hehehe";
+
+            }
+            function meow(){
+                alert("helloooo")
+            }
+            function tring(){
+                document.getElementById("text2").style.background="Aqua"
+            }
+            function tringtring(){
+                document.getElementById("text2").style.background="Pink"
+            }
+            function dishoom(){
+                alert("Page submitted");
+            }
+            function dhoom(){
+                let x=document.getElementById("Myselect").value;
+                document.getElementById("teesmaarkhan").innerHTML="The option chosen is:"+x;
+                
+            }
+        </script>
+    </body>
+</html>

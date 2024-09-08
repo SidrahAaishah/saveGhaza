@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <form onsubmit="return validate()" value="submit" method="post" action="sign.php" >
+    <table>
+      <caption>Details</caption>
+      <tr>
+        <td>
+          <label for="username">username</label>
+          <input type="text"  name="name" placeholder="John" id="name">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="email">email</label>
+          <input type="text"  name="email" placeholder="abc@gmail.com" id="email">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <label for="pass">password</label>
+          <input type="password"  name="pass" placeholder="password" id="pass"></td>
+      </tr>
+    </table>
+    <input type="submit">
+  </form>
+  // 
+  <script>
+    function validate(){
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value.trim();
+      if(email==""){
+        alert("Dear"+name+"email required");
+        return false;
+      }
+    }
+  </script>
+</body>
+</html>
