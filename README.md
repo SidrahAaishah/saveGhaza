@@ -10,7 +10,7 @@ This project aims to raise awareness and gather support through a digital petiti
 - **Sharing Functionality**: Users can share the petition link on social media platforms to spread awareness.
 
 ## Technologies Used
-- **Frontend**: HTML, CSS, JavaScript (or React if you're using it)
+- **Frontend**: HTML, CSS, JavaScript
 - **Backend**: Node.js with Express
 - **Database**: MongoDB for storing user data and petition signatures
 
